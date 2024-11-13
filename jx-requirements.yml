@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: alfredogotamagmail
+    repository: jx-edongerock
   - key: staging
   - key: production
   ingress:
-    domain: "parainfra.id"
-    externalDNS: false
+    domain: parainfra.id
+    kind: ingress
     namespaceSubDomain: jx-dev.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: alfredogotamagmail
   repository: bucketrepo
   secretStorage: local
   vault: {}
